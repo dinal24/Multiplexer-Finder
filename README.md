@@ -3,12 +3,11 @@ Produces required multiplexer combination for a given bit pattern
 -------------------------------------------------------------------------------
 Usage: solver <inputfile> <outputfile>
 
-Program (written in Python) which takes as input a specification of a boolean function, and outputs a minimum sized circuit of 2-to-1 multiplexer gates which reproduces this input.
+Program (written in Python) which takes as input a specification of a boolean function, and outputs a minimum sized circuit of 2-to-1 multiplexer gates (MUX) which reproduces this input.
 
 Multiplexer Gate
 ------------------------
-For clarify, here is the logic table for the three input MUX gates I want used 
-in the resulting circuit the program designs.
+For clarification, here is the logic table for a three input MUX gate used in the resulting circuit the program designs.
 
 
 |ABC|Out|
@@ -22,17 +21,14 @@ in the resulting circuit the program designs.
 |110| 1 |
 |111| 1 |
 
-Basically, the third input in the mux gate chooses whether to output the first 
-or second input value.  More succinctly
+Basically, the third input in the mux gate chooses whether to output the first or second input value.  More succinctly
 
 |AB C| Out|
 |:----:|:----:|
 |Ax 0| A|
 |xB 1| B|
 
-A circuit tree of MUX gates, if supplemented with constant 0 and 1 inputs, can 
-produce any boolean function.  In this sense, MUX gates are universal logic 
-gates.
+A circuit tree of MUX gates, if supplemented with constant 0 and 1 inputs, can produce any boolean function.  In this sense, MUX gates are universal logic gates.
 
 
 INPUT file specification
